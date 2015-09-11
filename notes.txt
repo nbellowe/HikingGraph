@@ -1,0 +1,27 @@
+Plan for “trailsy”:
+	First gather the path-segments of the trails. 
+	Take these path-segments and the trailhead’s longitude/latitude.
+		Determine each vertex in the path-segment’s longitude and latitude
+		Take this longitude and latitude, and query external api for elevation (server side, once, just making a database for later).
+	Then, traverse each trail and graph the elevation gain over length traveled along path.
+	Generate graph with the canvas? Or maybe something better. 
+	Cache these graphs server-side
+
+
+Path: XY[];
+run this database through PathToPathAndElevation(XY[] xyArr, XYElevation[] worldMap) XYElevation[]
+
+Foreach path in paths:
+	Foreach point in path:
+		Graph points z coordinate.
+
+
+https://maps.googleapis.com/maps/api/elevation/json?locations=39.9440287,-105.2901363&key=AIzaSyCNXMjRj14ZmYDOT-EFjwebvSMHua6Ww6A
+
+TODO: 
+	Get path data for all trails displayable.
+	Run that path data through a program to get the elevation.
+	Run that output through a program to generate charts for each path’s elevation change.
+	Devise a system to display these graphs client-side. 
+
+
